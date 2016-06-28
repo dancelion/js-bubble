@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas 圆圈测试</title>
+	<!-- <script src="https://use.typekit.net/zog0fdt.js"></script>
+	<script>//try{Typekit.load({ async: true });}catch(e){}</script> -->
+	<style type="text/css" media="screen">
+		*{box-sizing: border-box;}
+		html,body{margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; color:#fff;}
+		body{line-height: 1;overflow: hidden;}
+		body::after {position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.55); content: ""; }
+/* 		h1{text-align:center; font-family: 'fertigo-script',cursive;position: fixed;z-index:2;width:100%;}
+ */		#setting{width: 160px; height: 160px; background: rgba(72, 72, 72, 0.53); border-radius: 5px; position: absolute; bottom: 7em; left: 6em; z-index: 2;}
+		#setting table{width: 100%; height: 75%; margin-top: 1em;font-family: 微软雅黑;}
+		#setting table th{ text-align:right;font-weight:400;}
+		#setting table select{width: 64px;font-family: 微软雅黑;}
+	</style>
+</head>
+<body>
+	<!-- <h1>canvas circle</h1> -->
+	<div id="setting">
+		<table>
+			<tr>
+				<th>颜色：</th>
+				<td>
+					<select class="opt_set" id="color">
+						<option value="243,248,241,">荼白</option>
+						<option value="66,75,80,">鸦青</option>
+						<option value="23,124,176,">靛青</option>
+						<option value="120,146,98,">竹青</option>
+						<option value="73,65,102,">黛色</option>
+						<option value="157,41,50,">胭脂</option>
+						<option value="232,222,176,">牙白</option>
+						<option value="118,102,77,">黎色</option>
+						<option value="163,226,197,">艾青</option>
+						<option value="65,80,101,">黛蓝</option>
+						<option value="215,236,241,">月白</option>
+						<option value="237,87,254,">妃色</option>
+						<option value="168,132,98,">驼色</option>
+						<option value="169,127,117,">绾色</option>
+						<option value="212,242,232,">水绿</option>
+						<option value="195,39,43,">赤色</option>
+						<option value="217,182,18,">秋香色</option>
+						<option value="random">随机</option>
+						<option value="blink">闪烁</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>尺寸：</th>
+				<td>
+					<select class="opt_set" id="size">
+						<option value="10">小</option>
+						<option value="30" selected>中</option>
+						<option value="50">大</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>位置：</th>
+				<td>
+					<select class="opt_set" id="pos">
+						<option value="top" selected>顶部</option>
+						<option value="bottom">底部</option>
+						<option value="left">左侧</option>
+						<option value="right">右侧</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<canvas id="circle_canvas"> </canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.4.4/randomColor.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="circle.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$.backstretch('https://unsplash.it/1920/1272/?random');
+	})
+</script>
+</body>
+</html>
